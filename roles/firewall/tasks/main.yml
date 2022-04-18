@@ -1,0 +1,12 @@
+---
+- name: playbook to install firewall
+  yum: 
+    name: firewalld
+    state: latest
+- name: start the firewall service
+  service: 
+    name: firewalld
+    state: started
+    enabled: true
+
+
